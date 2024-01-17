@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rural-Kitchen</title>
+        <link rel="script" href="../../Shrey/main.html">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="../fonts/WaterBrush-Regular.ttf">
+        <script>
+
+            function val(){
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                let c=document.getElementById('email2').value;
+                if(!(c.match(mailformat))){z
+                    alert("Enter valid mail!");
+                    return false;
+                }
+                let a=document.getElementById('pswd1').value;
+                let b=document.getElementById('pswd2').value;
+                if(!a){
+                    alert("Password cannot be empty!")
+                    return false;
+                }
+                else if(a!=b){
+                    alert("Passwords dont match!");
+                    return false;
+                }
+                else{
+                    open("../../Shrey/main.html");
+                }
+            }
+            function check(){
+                let x=document.getElementById("email").value;
+                let y=document.getElementById("pswd").value;
+                if(!(x=="sanjayb@gmail.com" || y=="abcd1234")){
+                    alert("Invalid credentials!");
+                    return false;
+                }
+                open("../../Shrey/main.html");
+            }
+        </script>
+    </head>
+<link rel="stylesheet" href="../CSS/css with preloader.css">
+<meta charset="UTF-8">
+<body onload="myfunc()"  onsubmit="validation1()">
+<!--    <embed name="GoodEnough" src="C:\Users\sanja\Music\Believer_320(PagalWorld).mp3" loop="true" hidden="true" autostart="true">-->
+    <div id="loading"></div>
+    <table>
+        <col>
+        <col style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <col style="text-align: right;">
+        <tr>
+            <td id="logobox">
+                <img src="../pics\proj_logo.png" class="logo">
+            </td>
+            <td id="quo" style="text-align: center;">
+                <h1>One cannot think well, love well, sleep well, if one has not dined well.</h1>
+            </td>
+            <td>
+                <form>
+                    <input type="button" id="back" value="Home" onclick="history.back()" title="Click here to return home"> 
+                </form>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="bdy">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signup"> 
+                    <form onsubmit="return val()">
+                        <label for="chk" aria-hidden="true">
+                            Sign up
+                        </label>
+                        <input type="text" id="txt" placeholder="User name" required="" autocomplete="off">
+                        <input type="email" id="email2" placeholder="Email">
+                        <input type="password" id="pswd1" placeholder="Set Password">
+                        <input type="password" id="pswd2" placeholder="Confirm Password">
+
+                        <input class="btn" id="signupbtn" type="submit" value="Sign Up" >
+                        <a style="margin: auto ;padding-left: 100px;"  href="htmlop..html">Click here for more signup options.</a>
+                    </form> 
+                </div>
+                <div class="login"> 
+                    <form onsubmit=" return check()">
+                        
+                        <label for="chk" aria-hidden="true">
+                            Login
+                        </label> 
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="password" id="pswd" placeholder="Password" required>
+                        <button class="btn" id="loginbtn">Login</button>
+                        
+                    </form> 
+                   
+                </div>
+        </div>
+    </div>
+<audio autoplay loop src="../ASSETS/Let%20Me%20Down%20Slowly%20!%20Instrumental%20!%20Bgm.mp3"></audio>
+    <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <br/>
+    <script>
+            
+        var pre = document.getElementById('loading');
+        function myfunc(){
+            pre.style.display= 'none';
+        }
+    
+    </script>
+</body>
+
+    <footer style="background-color: white;height: 150px;padding: 20px" >
+        <div style="text-align: center">
+            Copyright &copy; 2022
+        </div>
+        <div style="text-align: center;font-family: 'BankGothic Md BT';font-weight: bold;">
+            Made in India!
+        </div>
+
+    </footer>
+
+</html>

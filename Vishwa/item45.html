@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Item 1</title>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            height: 1100px;
+            padding-top: 25px;
+            padding-bottom: 15px
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 50% 50%;
+            }
+            25% {
+                background-position: 75% 50%;
+            }
+            50% {
+                background-position: 50% 75%;
+            }
+            75% {
+                background-position: 75% 25%;
+            }
+            100% {
+                background-position: 25% 75%;
+            }
+        }
+        
+        .text {
+            margin: 40px auto;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: #dfdfdf;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 2px #dfdfdf, -2px 5px 1px #b8b8b8, -4px 8px 0px #979797, -6px 11px 0px #747474, -8px 14px 0px #565656, -10px 17px 0px #343434, -12px 20px 0px #171717, -14px 23px 0px #000;
+        }
+        
+        .card {
+            border-radius: 40px;
+            padding: 100px;
+            background-color: antiquewhite;
+            box-shadow: 15px 15px 18px yellow;
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .sup {
+            color: grey;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .card button {
+            border: none;
+            border-radius: 20px;
+            outline: 0;
+            padding: 12px;
+            color: black;
+            background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+        
+        .card button:hover {
+            background-color: #2EE59D;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+    </style>
+    <script>
+        function amount() {
+            let a = document.getElementById("amt").value;
+            var amt;
+            if (parseInt(a) == 0) {
+                alert("Quantity must be Mentioned");
+            }
+            amt = parseInt(a) * 40;
+            document.getElementById("price").innerHTML = amt;
+        }
+    </script>
+</head>
+
+<body>
+    <p class="text">Your Orders</p>
+    <div class="card">
+        <img src="original_pics/Vanilla.jpg" style="width:100%;border-radius: 40px">
+        <h1 style="font-family: 'Trebuchet MS'">Vanilla/h1>
+            <p class="sup" id="price">40</p>
+            <select name="ET" id="amt" style="border:2px; background-color: sandybrown; padding: 8px; border-radius: 10px;"><option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option></select>
+            <p><button onclick="amount()">CALCULATE</button></p>
+            <h3 style="font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;">#Soru Dhannn Mukkiyamm...</h3>
+
+            <p><a target="_blank" href="../Ganesh/main_payment.html"><button>PAY</button></a></p>
+
+
+    </div>
+    <br/>
+    <div style="padding-top: 150px;">
+        <footer style="height: 100px;padding: 5px;font-size: 20px;">
+            <div style="text-align: center">
+                Copyright &copy; 2022
+            </div>
+            <div style="text-align: center;font-family: 'BankGothic Md BT';font-weight: bold;">
+                Made with &hearts; in India
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+</html>

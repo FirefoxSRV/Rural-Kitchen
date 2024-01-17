@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+<form onsubmit="return jobDone()" name="mainForm">
+  <table style="border-collapse: collapse;text-align: center ">
+    <tr>
+      <td>
+        Name :
+      </td>
+      <td>
+        <input type="text" id="nameTxt">
+      </td>
+      <td style="color: red;display: none" id="firstDisplay">
+        &nbsp;*Please fill out this field
+      </td>
+    </tr>
+    <tr style="height: 20px">
+
+    </tr>
+    <tr>
+      <td>
+        Age :
+      </td>
+      <td>
+        <input type="text" id="ageTxt">
+      </td>
+      <td style="color: red;display: none" id="secondDisplay">
+        &nbsp;*Please fill out this field
+      </td>
+    </tr>
+    <tr style="height: 20px">
+
+    </tr>
+    <tr>
+      <td>
+        <input type="radio" name="gender" id="mal" value="2">Male
+      </td>
+      <td>
+        <input type="radio" name="gender" id="fem" value="3">Female
+      </td>
+      <td style="color: red;display: none" id="thirdDisplay">
+        &nbsp; *Please fill out this field
+      </td>
+    </tr>
+    <tr style="height: 30px">
+
+    </tr>
+    <tr>
+      <td>
+        Preferences:
+      </td>
+      <td>
+        <input type="checkbox" name="freaks" value="1" id="redd">red
+        <input type="checkbox" name="freaks" value="2" id="bluee">blue
+        <input type="checkbox" name="freaks" value="3" id="greenn">green
+      </td>
+      <td style="color: red;display: none" id="fourthDisplay">
+        &nbsp;*Please fill out this field
+      </td>
+    </tr>
+    <tr style="height: 30px">
+
+    </tr>
+    <tr>
+      <td>
+        Email:
+      </td>
+      <td>
+        <input type="text" id="mailz">
+      </td>
+      <td id="fifthDisplay" style="display: none;color: red">
+        &nbsp;*Please fill out this field
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<script>
+  function jobDone(){
+    var x=document.getElementById("nameTxt");
+    var y=document.getElementById("ageTxt");
+    var z=document.mainForm.gender.value;
+    var a=document.getElementById("redd");
+    var b=document.getElementById("bluee");
+    var c=document.getElementById("greenn");
+    var d=document.getElementById("mailz");
+    console.log(z);
+    if(x.value==""){
+      document.getElementById("firstDisplay").style.display="block";
+      return false;
+    }else{
+      document.getElementById("firstDisplay").style.display="none";
+    }
+
+    if(y.value==""){
+      document.getElementById("secondDisplay").style.display="block";
+      return false;
+    }else if(isNaN(y.value)){
+      confirm("Please enter a number");
+    }
+    else{
+      document.getElementById("secondDisplay").style.display="none";
+    }
+
+    if(z!="2"&& z!="3"){
+      document.getElementById("thirdDisplay").style.display="block";
+      return false;
+    }else {
+      document.getElementById("thirdDisplay").style.display="none";
+    }
+
+    if(a.checked==false && b.checked==false && c.checked==false){
+      document.getElementById("fourthDisplay").style.display="block";
+      return false;
+    }
+    else{
+      document.getElementById("fourthDisplay").style.display="none";
+    }
+
+    if(!(d.value.includes(".com") && d.value.includes("@") && d.value.length>7 && d.value.indexOf("@")!="0")){
+      document.getElementById("fifthDisplay").style.display="block";
+      return false;
+    }else{
+      document.getElementById("fifthDisplay").style.display="none";
+    }
+    open("prac2.html");
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rural-Kitchen</title>
+        <link rel="script" href="../../Shrey/main.html">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="../fonts/WaterBrush-Regular.ttf">
+    </head>
+<link rel="stylesheet" href="../CSS/login3.css">
+<meta charset="UTF-8">
+
+<body>
+    <table>
+        <col>
+        <col style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <col style="text-align: right;">
+        <tr>
+            <td id="logobox">
+                <img src="../pics\proj_logo.png" class="logo">
+            </td>
+            <td id="quo" style="text-align: center;">
+                <h1>“One cannot think well, love well, sleep well, if one has not dined well.”</h1>
+            </td>
+            <td>
+                <form>
+                    <input type="button" id="back" value="Home" onclick="history.back()" title="Click here to return home"> 
+                </form>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="bdy">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signup"> 
+                    <form>
+                        <label for="chk" aria-hidden="true">
+                            Sign up
+                        </label> 
+                        <input type="text" name="txt" placeholder="User name" required="" autocomplete="off">
+                        <input type="email" name="email" placeholder="Email" required=""> 
+                        <input type="password" name="pswd1" placeholder="Set Password" required="">
+                        <input type="password" name="pswd2" placeholder="Confirm Password" required="">
+
+                        <button class="btn" id="signupbtn" >Sign up</button> 
+                    </form> 
+                </div>
+                <div class="login"> 
+                    <form>
+                        
+                        <label for="chk" aria-hidden="true">
+                            Login
+                        </label> 
+                        <input type="email" name="email" placeholder="Email" required=""> 
+                        <input type="password" name="pswd" placeholder="Password" required="">
+                        <button class="btn" id="loginbtn" onclick="window.location.href='../../Shrey/main.html';">Login</button>
+                        
+                    </form> 
+                   
+                </div>
+        </div>
+    </div>
+    <br/>
+    
+</body>
+
+    <footer style="background-color: white;height: 150px;padding: 20px" >
+        <div style="text-align: center">
+            Copyright &copy; 2022
+        </div>
+        <div style="text-align: center;font-family: 'BankGothic Md BT';font-weight: bold;">
+            Made in India!
+        </div>
+
+    </footer>
+
+</html>

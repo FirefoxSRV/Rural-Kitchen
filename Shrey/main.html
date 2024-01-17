@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"Welcome to Rural Kitchen"</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="script" href="js/home_screen.js">
+    <link rel="script" href="HTML/About.html">
+    <link rel="script" href="../Vishwa/menu.html">
+    <link rel="script" href="HTML/feedback.html">
+</head>
+<script type="text/javascript" src="js/home_screen.js"></script>
+<body class="scrollable">
+    <div class="mainBody" style="padding: 10px;">
+        <div>
+            <div class="topBar">
+                <img src="Assets/proj_logo.png" alt="../Assets/proj_logo.png" class="logo">
+                <topList>
+                    <ul>
+                        <li><a onclick="writeToHomeScreenBody(homeScreenContent['home'])" id="homeButton" class="yesClick">Home</a></li>
+                        <li><a onclick="writeToHomeScreenBody(homeScreenContent['about'])" id="aboutButton" class="noClick">About</a></li>
+                        <li><a onclick="writeToHomeScreenBody(homeScreenContent['items'])" id="itemsButton" class="noClick">Items</a></li>
+                        <li style="width: 34.8%" ></li>
+                        <li><a onclick="window.location.href='../Sanjay/HTML/sanjay_main.html'" class="log_click">Log&nbsp;In</a></li>
+                    </ul>
+                </topList>
+            </div>
+        </div>
+        <object id="homeBody" data="HTML/Home.html" style="padding-bottom: 10px" >
+        </object>
+    </div>
+</body>
+<footer style="background-color: white;height: 300px;padding: 20px" >
+    <div style="text-align: center">
+        Copyright &copy; 2022
+    </div>
+    <div style="text-align: center;font-family: 'BankGothic Md BT';font-weight: bold;">
+        Made with &hearts; in India
+    </div>
+    <div style="padding-left: 40%;padding-top: 30px;">
+        <div class="googleApple" style="box-shadow: 2px 2px grey;background: grey;height: 20px;width: 200px;border-radius: 40px;color: white;padding: 20px;text-align: center" onclick="location.href='HTML/feedback.html';">
+            <h3>Feedback form</h3>
+        </div>
+    </div>
+</footer>
+
+</audio>
+<script>
+    if(sessionStorage.getItem("screenToShow")!==null){
+        writeToHomeScreenBody(homeScreenContent[sessionStorage.getItem("screenToShow")]);
+    }else {
+        sessionStorage.setItem("screenToShow","home");
+    }
+</script>
+</html>
+

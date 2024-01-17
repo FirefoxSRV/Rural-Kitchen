@@ -1,0 +1,215 @@
+.vid2{
+    padding-top: 10%;
+}
+.vid1{
+    padding-left: 0% ;
+    padding-top: 10%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.head{
+    padding-left: 15%;
+}
+.box{
+    transition-property: all;
+    border: 3px solid black;
+    padding: 20%;
+    text-align: center;
+    border-style: solid;
+    border-spacing: 20px;
+    border-radius: 30px;
+    width: 200px;
+    box-shadow: 10px 10px 18px red;
+    background-image: url("pizza.jpg") ;
+}
+.box:hover{
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+    border: 3px solid black;
+    padding: 20%;
+    text-align: center;
+    border-style: solid;
+    border-spacing: 20px;
+    border-radius: 30px;
+    width: 200px;
+    box-shadow: 10px 10px 18px red;
+    background-image: url("darkn.jpg");
+    
+    
+}
+nav{
+    background-color: black;
+    color: white;
+    padding-top: 51px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('payment.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: bgchange;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition-property: all;
+    background-color: chartreuse;
+    box-shadow: 13px 13px 18px black;
+    
+}
+.netbanking{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: chartreuse;
+    transition-property: all;
+    box-shadow: 13px 13px 18px black;
+    
+
+    
+} 
+
+.upi{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition-property: all;
+    background-color: chartreuse;
+    box-shadow: 13px 13px 18px black;
+    
+    
+
+}
+.card:hover {
+    width: 200px;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: aqua;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    text-decoration: none;
+  
+  
+}
+.netbanking:hover{
+    width: 200px;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: aqua;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    
+  
+  
+}
+.upi:hover{
+    width: 200px;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 20%;
+    background-color: aqua;
+    box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    
+  
+  
+}
+@keyframes bgchange {
+    0%{
+        background-image: url('new2.jpg');
+        /* height: 200px; */
+    }
+    25%{
+        background-image:url('new3.jpg');
+        /* height: 200px; */
+    }
+    50%{
+        background-image:url('new4.jpg');
+        /* height: 200px; */
+    }
+    75%{
+        background-image:url('new1.jpg');
+        /* height: 200px; */
+    }
+    100%{
+        background-image:url('new2.jpg');
+        /* height: 200px; */
+    }
+}
+.head{
+    padding-top: 10%;
+}
+.wrapper{
+
+    padding-left: 50%;
+    padding-top: 15%;
+    transform: translate(-50%, -50%);
+}
+
+a{
+
+    background-color: black;
+    display: block;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    border: 2px solid red;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+a span{
+    position: relative;
+    z-index: 2;
+}
+
+a:after{
+    position: absolute;
+    border-radius: 20px;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+}
+
+a:hover{
+    color: #fff;
+}
+
+a:hover:after{
+    width:100%;
+    }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netbanking</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function jobDone(){
+    var x=document.getElementById("nameTxt");
+    var y=document.getElementById("bank name");
+    var z=document.getElementById("cusid");
+    var k=document.getElementById("pass");
+
+    if(x.value==""){
+      document.getElementById("firstDisplay").style.display="block";
+      return false;
+    }else{
+      document.getElementById("firstDisplay").style.display="none";
+    }
+
+    if(y.value=="1"){
+      document.getElementById("secondDisplay").style.display="block";
+      return false;
+    }
+    else{
+      document.getElementById("secondDisplay").style.display="none";
+    }
+
+    if(z.value==""){
+      document.getElementById("thirdDisplay").style.display="block";
+      return false;
+    }else if(isNaN(z.value)){
+      confirm("Please enter a number");
+    }
+    else{
+      document.getElementById("thirdDisplay").style.display="none";
+    }
+
+    if(k.value==""){
+      document.getElementById("fourthDisplay").style.display="block";
+      return false;
+    }else{
+      document.getElementById("fourthDisplay").style.display="none";
+    }
+
+    open("thanku.html");
+
+  }
+
+
+    </script>
+    <style>
+        td,tr{
+            text-align: left;
+            width:500px;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="netbanking.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="boxnew">
+        <table style="border-collapse: collapse;">
+            <col width="30%">
+            <col width="70%">
+            <tr>
+                <td style="border-right: 2px solid black;">
+                    <img src="Axis_Bank.png" style="padding-right: 50px;" width="200px"><br><br><br><br><br>
+                    <img src="HDFC_Bank_logo.png" style="padding-right: 50px;" width="200px">
+                    
+
+
+                </td>
+                <td>
+                    <form onsubmit="return jobDone()" name="mainForm" >
+
+                        <div style="padding-left: 70px;">
+                            <table style="border-collapse: collapse;text-align: center ">
+                                <col>
+                                <col>
+                                <tr>
+                                    <td colspan="2">
+                                       <strong><p class="font">--- Customer's Name<span style="color: red;">*</span> ---</p></strong> 
+                                    </td>
+                                </tr>
+                                <tr style="height: 8px;">
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="nameTxt" placeholder="Enter Your Name">
+                                    </td>
+                                    <td style="color: red;display: none;" id="firstDisplay">
+                                        &nbsp;*Please fill out this field
+                                    </td>
+                                </tr>
+                                <tr style="height: 20px;">
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong><p class="font">--- Bank Name<span style="color: red;">*</span> ---</p></strong>   
+                                    </td>
+                                </tr>
+                                <tr style="height: 8px;">
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="bank name" id="bank name">
+                                            <option value="1">--- Select a Bank ---</option>
+                                            <option value="hdfc">HDFC LTD</option>
+                                            <option value="axis">AXIS RETAIL</option>
+                                            <option value="indian">INDIAN BANK</option>
+                                            <option value="sbi">SBI LTD</option>
+                                        </select>
+                                    </td>
+                                    <td style="color: red;display: none;" id="secondDisplay">
+                                        &nbsp;*Please fill out this field
+                                    </td>
+                                </tr>
+                                <tr style="height: 20px">
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong><p class="font"> --- Customer Id<span style="color: red;">*</span> ---</p></strong> 
+
+                                    </td>
+                                </tr>
+                                <tr style="height: 8px;">
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="cusid" placeholder="Enter Customer ID">
+                                    </td>
+                                    <td style="color: red;display: none;" id="thirdDisplay">
+                                        &nbsp;*Please fill out this field
+                                    </td>
+                                </tr>
+                                <tr style="height: 20px">
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong><p class="font">--- Password<span style="color: red;">*</span> ---</p> </strong>      
+
+                                    </td>
+                                </tr>
+                                <tr style="height: 8px;">
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="password" id="pass" placeholder="Enter Your Password">
+                                    </td>
+                                    <td style="color: red;display: none;" id="fourthDisplay">
+                                        &nbsp;*Please fill out this field
+                                    </td>
+
+                                </tr>
+                                <tr style="height: 20px">
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="main_payment.html"><input class="shadow" type="button" value="RETURN"
+                                                                           style="background-color: red; padding: 10px; color: white; border-radius: 15px;transition-property: all; "></a>
+
+                                    </td>
+                                    <td>
+                                        <a href="thanku.html"><input class="shadow" type="submit" value="PAY NOW"
+                                            style="background-color: chartreuse; color: rgb(0, 4, 255); padding: 10px; border-radius: 15px; transition-property: all;"></a>
+
+
+                                    </td>
+                                </tr>
+                                
+                                
+
+                        </div>
+
+
+                    </form>
+                    
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="script" href="About.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="script" href="../js/home_screen.js">
+    <link rel="script" href="../main.html">
+</head>
+
+
+<script>
+    function sendToItemsPage(){
+        sessionStorage.setItem("screenToShow","items");
+        window.parent.location.reload();
+    }
+    function sendToAboutPage(){
+        sessionStorage.setItem("screenToShow","about");
+        window.parent.location.reload();
+    }
+
+</script>
+
+<body style="padding-left: 5%;padding-right: 5%">
+    <div style="height: 40px">
+
+    </div>
+    <div style="height: available;text-align: center;font-family: 'Sofia', sans-serif;font-size: 75px;color: white;background-color: #051937;border-radius: 150px;padding: 20px">
+            Welcome <br/>
+
+    </div>
+    <div style="height: 180px">
+
+    </div>
+    <table style="width: 100%">
+        <td style="width: 48%">
+            <hr style="background-color: white;">
+        </td>
+        <td class="arrow" style="">
+
+        </td>
+        <td style="width: 48%">
+            <hr style="background-color: white">
+        </td>
+    </table>
+
+
+    <div style="height: 50px;">
+
+    </div>
+    <div class="homeDiv" onclick="sendToItemsPage()">
+        <table>
+            <tr>
+        <td>
+
+                <img src="../Assets/EarthernPot.jpg" style="border-radius: 50px;height: 250px;width: 350px">
+
+        </td>
+        <td style="width: 100px">
+
+        </td>
+        <td>
+            <p style="font-family: 'Berlin Sans FB';font-size: 30px">
+                Order from your favorite restaurant & track on the go, with your all-new rural kitchen
+            </p>
+        </td>
+
+    </tr>
+        </table>
+    </div>
+    <div style="height: 100px">
+    </div>
+    <div style="height: 100px;padding-left: 200px">
+        <table>
+            <tr>
+                <td>
+                    <div class="googleApple" id="google" style="height: 70px; width: 230px;background: black;border-radius: 10px;color: white;padding-bottom: 7px" onclick="window.open('https://play.google.com/store/search?q=swiggy&c=apps')">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="../Assets/google.png" style="height: 70px;">
+                                </td>
+                                <td style="font-family: 'BankGothic Md BT';font-size: large">
+                                    Play Store
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td style="width: 200px">
+
+                </td>
+                <td>
+                    <div class="googleApple" id="apple" style="height: 70px; width: 230px;background: white;border-radius: 10px;color: black;" onclick="window.open('https://apps.apple.com/in/app/swiggy-food-delivery-more/id989540920')">
+                        <table>
+                            <tr>
+                                <td style="padding: 3px;padding-bottom: 10px" >
+                                    <img src="../Assets/apple.png" style="height: 60px;">
+                                </td>
+                                <td style="width: 10px">
+
+                                </td>
+                                <td style="font-family: 'BankGothic Md BT';font-size: large;">
+                                    App Store
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 50px">
+    </div>
+    <div class="homeDiv"  id="div2" onclick="sendToAboutPage()">
+        <table>
+            <tr style="">
+                <td style="width: 100px">
+                </td>
+                <td>
+                    <img id="userdiv" src="../Assets/user.png" style="border-radius: 50px;height: 230px;">
+                </td>
+                <td style="width: 100px;">
+
+                </td>
+                <td style="font-family: 'BankGothic Md BT';font-size: 65px">
+                    ABOUT US ?
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </div>
+
+    <audio autoplay src="../Assets/concalma.m4a"></audio>
+</body>
+
+</html>
